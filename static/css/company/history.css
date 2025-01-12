@@ -1,21 +1,21 @@
 /* 연혁 섹션 스타일 */
 .history-section {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 /* 연혁 년도 스타일 */
 .history-year {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
 }
 
 /* 연혁 년도 제목 */
-.history-year h3 {
-    font-size: 1.5rem;
+.history-year h4 {
+    font-size: 1.6rem;
     font-weight: bold;
     color: #5f4740;
-    margin-bottom: 10px;
-    border-left: 4px solid #5f4740; /* 강조선 */
-    padding-left: 10px; /* 텍스트와 강조선 간격 */
+    margin-bottom: 20px;
 }
 
 /* 연혁 리스트 스타일 */
@@ -26,8 +26,9 @@
 }
 
 .history-list li {
-    padding: 8px 0;
-    border-bottom: 1px solid #ddd; /* 항목 사이 구분선 */
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
     color: #333;
 }
 

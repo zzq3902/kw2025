@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/company/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/company/location.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <!-- 사이드바 -->
+        <div class="col-md-2"> <!-- 사이드바 폭 설정 -->
+            <div class="sidebar">
+                <h5 class="sidebar-title text-white text-center py-3">회사소개</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="{% url 'greeting' %}" class="sidebar-link {% if request.path == '/company/greeting/' %}active{% endif %}">
+                            - 인사말
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="{% url 'history' %}" class="sidebar-link {% if request.path == '/company/history/' %}active{% endif %}">
+                            - 연혁
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="{% url 'location' %}" class="sidebar-link {% if request.path == '/company/location/' %}active{% endif %}">
+                            - 오시는 길
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 메인 콘텐츠 -->
+        <div class="col-md-10">
+            <h2 class="mb-4">오시는 길</h2>
+            <hr>
+            <div class="map-container">
+                <!-- 지도 이미지 -->
+                <img src="{% static 'images/map.png' %}" alt="지도" class="img-fluid">
+            </div>
+            <div class="container mt-4">
+    <div class="transport-info">
+        <!-- 버스 -->
+        <div class="transport-item d-flex align-items-center">
+            <img src="{% static 'images/bus-icon.png' %}" alt="버스" class="transport-icon">
+            <div class="transport-details">
+                <h5>버스</h5>
+                <p>석계역 하차, 261번 이용 가능</p>
+            </div>
+        </div>
+        <!-- 지하철 -->
+        <div class="transport-item d-flex align-items-center">
+            <img src="{% static 'images/subway-icon.png' %}" alt="지하철" class="transport-icon">
+            <div class="transport-details">
+                <h5>지하철</h5>
+                <p>1호선 광운대역 1번 출구, 도보 10분</p>
+            </div>
+        </div>
+        <!-- 자동차 -->
+        <div class="transport-item d-flex align-items-center">
+            <img src="{% static 'images/car-icon.png' %}" alt="자동차" class="transport-icon">
+            <div class="transport-details">
+                <h5>자동차</h5>
+                <p>광운로 20 진입 후, 광운대학교 정문 주차장 이용 가능</p>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+{% endblock %}

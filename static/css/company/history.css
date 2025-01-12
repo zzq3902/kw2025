@@ -1,0 +1,43 @@
+/* 연혁 섹션 스타일 */
+.history-section {
+    margin-top: 20px;
+}
+
+/* 연혁 년도 스타일 */
+.history-year {
+    margin-bottom: 30px;
+}
+
+/* 연혁 년도 제목 */
+.history-year h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5f4740;
+    margin-bottom: 10px;
+    border-left: 4px solid #5f4740; /* 강조선 */
+    padding-left: 10px; /* 텍스트와 강조선 간격 */
+}
+
+/* 연혁 리스트 스타일 */
+.history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.history-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd; /* 항목 사이 구분선 */
+    color: #333;
+}
+
+/* 마지막 항목의 구분선 제거 */
+.history-list li:last-child {
+    border-bottom: none;
+}
+
+/* 리스트 항목 호버 효과 */
+.history-list li:hover {
+    color: #5f4740;
+    background-color: #f9f9f9;
+}

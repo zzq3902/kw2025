@@ -7,6 +7,20 @@
     <title>KW</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
+        /* HTML과 BODY를 Flexbox로 설정 */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 메인 콘텐츠가 차지하는 공간 */
+        main {
+            flex: 1;
+            margin-top: -20px;
+        }
+
         /* 헤더 전체 스타일 */
         .header {
             background-color: #ffffff; /* 헤더 배경 흰색 */
@@ -66,11 +80,6 @@
             text-decoration: underline;
         }
 
-        /* 메인 콘텐츠 상단 간격 */
-        main {
-            margin-top: -20px;
-        }
-
         /* 푸터 스타일 */
         .footer {
             background-color: #333; /* 푸터 배경 색 */
@@ -78,12 +87,15 @@
             padding: 20px 0; /* 위아래 여백 */
             font-size: 0.9rem; /* 글자 크기 */
             line-height: 1.6; /* 줄 간격 */
+            text-align: center;
         }
 
         .footer p {
             margin: 0; /* 문단 간격 제거 */
         }
     </style>
+    {% block extra_css %}
+    {% endblock %}
 </head>
 <body>
     <!-- 헤더 -->
@@ -122,8 +134,8 @@
     </main>
 
     <!-- 푸터 -->
-    <footer class="footer mt-5">
-        <div class="container text-center">
+    <footer class="footer">
+        <div class="container">
             <p>서울시 노원구 광운로 20 (월계동 447-1) 광운대학교 | 대표전화 02-940-5114</p>
             <p>COPYRIGHT © KWANGWOON UNIVERSITY. ALL RIGHTS RESERVED.</p>
         </div>

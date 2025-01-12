@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <!-- 메인 배너 -->
+    <section>
+        <img src="{% static 'images/main_banner.png' %}" alt="Main Banner" class="img-fluid w-100">
+    </section>
+
+    <!-- Products Section -->
+    <section class="mt-5">
+        <h2 class="text-center">PRODUCTS</h2>
+        <div class="row mt-3">
+            {% if products %}
+                {% for product in products %}
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.name }}</h5>
+                                <p class="card-text">{{ product.price }}원</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p class="text-center">No products available.</p>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- Notice Section -->
+    <section class="mt-5">
+        <h2 class="text-center">NOTICE</h2>
+        <ul class="list-group mt-3">
+            {% if notices %}
+                {% for notice in notices %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>{{ notice.title }}</span>
+                        <span>{{ notice.date }}</span>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <p class="text-center">No notices available.</p>
+            {% endif %}
+        </ul>
+    </section>
+
+</div>
+{% endblock %}

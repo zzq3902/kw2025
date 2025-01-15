@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filters %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/user/signup.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="signup-container mt-5">
+    <div class="signup-header">
+        <h1>회원가입</h1>
+        {% if messages %}
+        <div class="alert alert-info">
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <hr>
+    </div>
+    <form method="POST" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <div class="signup-box">
+            <h3>회원정보 입력</h3>
+            <table class="signup-table">
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text" name="username" placeholder="아이디 입력" required><button class="check-btn">중복확인</button></td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td><input type="password" name="password" placeholder="비밀번호 입력" required><span>비밀번호는 항목은 4 ~ 20자 이내로 입력해주세요</span></td>
+                </tr>
+                <tr>
+                    <td>비밀번호확인</td>
+                    <td><input type="password" name="password_confirm" placeholder="비밀번호 확인" required></td>
+                </tr>
+                <tr>
+                    <td>이름</td>
+                    <td><input type="text" name="name" placeholder="이름 입력" required></td>
+                </tr>
+                <tr>
+                    <td>생년월일</td>
+                    <td>
+                        <select name="birth_year" class="birth-select">
+                            <option value="">년</option>
+                            {% for year in 1900|range_filter:2025 %}
+                                <option value="{{ year }}">{{ year }}</option>
+                            {% endfor %}
+                        </select>
+                        <select name="birth_month" class="birth-select" required>
+                            <option value="">월</option>
+                            {% for month in 1|range_filter:13 %}
+                            <option value="{{ month }}">{{ month }}</option>
+                            {% endfor %}
+                        </select>
+                        <select name="birth_day" class="birth-select">
+                            <option value="">일</option>
+                            {% for day in 1|range_filter:32 %}
+                            <option value="{{ day }}">{{ day }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>전화번호</td>
+                    <td>
+                        <input type="text" name="phone_number1" placeholder="010" required>
+                        <input type="text" name="phone_number2" placeholder="0000" required>
+                        <input type="text" name="phone_number3" placeholder="0000" required>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="form-actions text-center mt-4">
+            <button type="submit" class="btn btn-primary signup-btn">회원가입</button>
+            <a href="{% url 'home' %}" class="btn btn-secondary cancel-btn">취소</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

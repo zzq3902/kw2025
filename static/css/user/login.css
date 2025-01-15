@@ -1,0 +1,65 @@
+/* 로그인 페이지 전체 컨테이너 */
+.login-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 로그인 헤더 */
+.login-header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.header-line {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+/* 로그인 내용 */
+.login-content {
+    margin: 20px 0;
+}
+
+/* 로그인 테이블 스타일 */
+.login-table-wrapper {
+    display: flex;
+    flex-direction: column; /* Flex 방향을 세로로 설정 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+
+
+.login-table {
+    border-spacing: 10px;
+    width: 100%;
+}
+
+.login-table td {
+    vertical-align: middle;
+    padding: 3px;
+    font-size: 1rem;
+}
+
+/* 입력 필드 스타일 */
+.login-table input {
+    width: 100%;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* 버튼 스타일 */
+.login-btn {
+    width: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.login-links a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+}

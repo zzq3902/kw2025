@@ -1,0 +1,132 @@
+/* 전체 페이지 설정 */
+.signup-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* 회원가입 헤더 */
+.signup-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.signup-header hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* 회원정보 박스 */
+.signup-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+
+}
+
+.signup-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* 테이블 스타일 */
+.signup-table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.signup-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.signup-table td:first-child {
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.signup-table input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.signup-table input[type="text"] {
+    width: 30%;
+}
+
+.signup-table span {
+    display: block;
+    margin-top: 5px;
+    color: #777;
+    font-size: 0.85rem;
+}
+
+/* 버튼 스타일 */
+.check-btn {
+    padding: 8px 15px;
+    margin-left: 10px;
+    background-color: #777;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.check-btn:hover {
+    background-color: #555;
+}
+
+/* 하단 버튼 그룹 */
+.signup-btn, .cancel-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signup-btn {
+    background-color: #333;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: #333;
+    margin-left: 10px;
+}
+
+.signup-btn:hover {
+    background-color: #555;
+}
+
+.cancel-btn:hover {
+    background-color: #aaa;
+}
+
+/* 생년월일 선택 스타일 */
+.birth-select {
+    width: 30%;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 0.9rem;
+}
+
+.birth-select:focus {
+    border-color: #333;
+    outline: none;
+}

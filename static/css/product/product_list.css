@@ -1,0 +1,53 @@
+/* 전체 테이블 */
+.product-table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* 각 열 너비 조정 */
+.image-column {
+    width: 15%;
+    text-align: center;
+}
+
+.description-column {
+    width: 50%;
+}
+
+.price-column {
+    width: 10%;
+    text-align: center;
+}
+
+.quantity-column {
+    width: 4%;
+    text-align: center;
+}
+
+/* 이미지 스타일 */
+.product-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 제품명 스타일 */
+.product-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* 제품 설명 스타일 */
+.product-content {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+    text-align: left;
+}

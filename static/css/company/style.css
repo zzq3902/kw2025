@@ -1,46 +1,46 @@
 /* 사이드바 전체 스타일 */
 .sidebar {
-    width: 100%; /* 사이드바 폭 조정 */
+    width: 100%;
 }
 
 /* 제목 스타일 */
 .sidebar-title {
-    background-color: #5f4740; /* 제목 배경색 */
-    color: #fff; /* 제목 텍스트 색상 */
+    background-color: #5f4740;
+    color: #fff;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
     padding: 10px;
-    margin-bottom: 5px; /* 제목과 메뉴 사이 간격 */
-    border: 1px solid #5f4740; /* 테두리 추가 */
-    border-radius: 0px; /* 모서리 각지게 */
+    margin-bottom: 5px;
+    border: 1px solid #5f4740;
+    border-radius: 0px;
 }
 
 /* 리스트 스타일 */
 .list-group-item {
-    background-color: #ede3df; /* 리스트 배경색 */
-    border: 1px solid #ccc; /* 테두리 추가 */
-    border-radius: 0px; /* 모서리 각지게 */
-    margin-bottom: 5px; /* 메뉴 사이 간격 */
+    background-color: #ede3df;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 5px;
     padding: 10px 15px;
 }
 
 /* 링크 기본 스타일 */
 .list-group-item a {
-    color: #5f4740; /* 기본 텍스트 색상 */
+    color: #5f4740;
     text-decoration: none;
     font-size: 1rem;
 }
 
 /* 현재 페이지의 메뉴 활성화 */
 .list-group-item a.active {
-    color: #0056b3; /* 활성화된 텍스트 색상 */
+    color: #0056b3;
     font-weight: bold;
-    text-decoration: underline; /* 강조 */
+    text-decoration: underline;
 }
 
 /* 링크 호버 효과 */
 .list-group-item a:hover {
-    color: #333; /* 호버 시 텍스트 색상 */
+    color: #333;
     text-decoration: underline;
 }

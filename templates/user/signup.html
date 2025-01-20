@@ -51,13 +51,13 @@
                         </select>
                         <select name="birth_month" class="birth-select" required>
                             <option value="">월</option>
-                            {% for month in 1|range_filter:13 %}
+                            {% for month in 1|range_filter:12 %}
                             <option value="{{ month }}">{{ month }}</option>
                             {% endfor %}
                         </select>
                         <select name="birth_day" class="birth-select">
                             <option value="">일</option>
-                            {% for day in 1|range_filter:32 %}
+                            {% for day in 1|range_filter:31 %}
                             <option value="{{ day }}">{{ day }}</option>
                             {% endfor %}
                         </select>

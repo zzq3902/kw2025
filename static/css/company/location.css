@@ -34,10 +34,10 @@
 }
 /* 지도 이미지 스타일 */
 .map-container img {
-    width: 60%; /* 사진 크기를 80%로 줄임 */
-    max-width: 600px; /* 최대 폭을 600px로 제한 */
-    margin: 0 auto; /* 가운데 정렬 */
-    display: block; /* 이미지 중앙 배치 */
+    width: 60%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

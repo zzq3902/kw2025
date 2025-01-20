@@ -25,9 +25,9 @@
 /* 로그인 테이블 스타일 */
 .login-table-wrapper {
     display: flex;
-    flex-direction: column; /* Flex 방향을 세로로 설정 */
-    justify-content: center; /* 수평 가운데 정렬 */
-    align-items: center; /* 수직 가운데 정렬 */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 

@@ -17,7 +17,3 @@ def home(request):
         "products": products,
         "notices": notices,
     })
-
-
-def company(request):
-    return render(request, 'pages/company_info.html')

@@ -18,6 +18,51 @@
             <p><strong>수량:</strong> {{ product.quantity }}</p>
         </div>
     </div>
+
+    <!-- 댓글 목록 -->
+    <div class="comments-section">
+        <h3>댓글</h3>
+        <ul class="comment-list">
+            {% for comment in comments %}
+                <li class="comment-container">
+                    <div class="comment-content">
+                        {% if comment.create_date == comment.modify_date %}
+                        <strong>{{ comment.author.username }}</strong> - {{ comment.create_date|date:"Y-m-d H:i" }}
+                        {% else %}
+                        <strong>{{ comment.author.username }}</strong> - {{ comment.create_date|date:"Y-m-d H:i" }} / 수정일자: {{ comment.modify_date|date:"Y-m-d H:i" }}
+                        {% endif %}
+                        <p>{{ comment.content }}</p>
+                    </div>
+
+                    <!-- 수정 및 삭제 버튼 -->
+                    {% if request.user == comment.author %}
+                    <div class="comment-actions">
+                        <a href="{% url 'comment_update' comment.id %}" class="btn btn-warning btn-sm">수정</a>
+                        <a href="{% url 'comment_delete' comment.id %}" class="btn btn-danger btn-sm">삭제</a>
+                    </div>
+                    {% endif %}
+                </li>
+            {% empty %}
+                <li>아직 댓글이 없습니다.</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+    <!-- 댓글 작성 폼 -->
+    {% if user.is_authenticated %}
+    <div class="comment-form">
+        <h3>댓글 작성</h3>
+        <form method="post" action="{% url 'comment_create' product.id %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">댓글 등록</button>
+        </form>
+    </div>
+    {% else %}
+        <p><a href="{% url 'login' %}">로그인</a> 후 댓글을 작성할 수 있습니다.</p>
+    {% endif %}
+
     <div class="back-to-list">
         <a href="{% url 'product_list' %}" class="btn btn-secondary">목록으로 돌아가기</a>
     </div>

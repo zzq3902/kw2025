@@ -43,3 +43,66 @@
     padding: 10px 20px;
     font-size: 1rem;
 }
+
+.comments-section {
+    margin-top: 30px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between; /* 왼쪽은 댓글 내용, 오른쪽은 버튼 */
+    align-items: center;
+}
+
+.comment-form {
+    margin-top: 20px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.comment {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.comment p {
+    margin: 5px 0;
+}
+
+.comment .btn {
+    margin-right: 5px;
+}
+
+.comment-container {
+    display: flex;
+    justify-content: space-between; /* 댓글 내용과 버튼 사이 여백 조정 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+
+.comment-content {
+    flex-grow: 1; /* 남은 공간을 차지하도록 설정 */
+}
+
+.comment-actions {
+    display: flex;
+    gap: 5px; /* 버튼 사이 간격 */
+}
+
+
